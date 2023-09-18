@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import todoReducer from "./todoSlice";
+import authReducer from "./authSlice.js";
 
 const rootReducer = combineReducers({
-  todos: todoReducer,
+  auth: authReducer,
 });
 
 export default rootReducer;

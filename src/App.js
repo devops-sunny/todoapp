@@ -1,19 +1,24 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import PageNotFound from "./page/PageNotFound/PageNotFound";
-import Todo from "./page/Todo/Todo";
-import AddTodo from "./page/Todo/AddTodo";
+import PageNotFound from "./page/PageNotFound/PageNotFound.jsx";
+import LoginForm from "./page/auth/Login";
+import SignupForm from "./page/auth/Signup.jsx";
+import Home from "./page/home/Home";
 
 function App() {
   const Auth = [
     {
       path: "/",
-      element: <Todo />,
+      element: <LoginForm />,
     },
     {
-      path: "/addtodo",
-      element: <AddTodo />,
+      path: "/signup",
+      element: <SignupForm />,
+    },
+    {
+      path: "/home",
+      element: <Home />,
     },
   ];
   return (
